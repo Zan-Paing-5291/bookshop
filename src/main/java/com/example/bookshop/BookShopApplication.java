@@ -77,19 +77,19 @@ public class BookShopApplication {
             Book book5 = new Book(
                     5,
                     IsbnGenerator.generate(),
-                    "Curse Chest",
+                    "One Piece",
                     "Best Movie",
                     49.99,
                     20,
-                    "https://source.unsplash.com/400x300/?jacksparrow");
+                    "https://source.unsplash.com/400x300/?ship");
             Book book6 = new Book(
                     6,
                     IsbnGenerator.generate(),
-                    "At World End",
+                    "Yama",
                     "Best Movie",
                     49.99,
                     20,
-                    "https://source.unsplash.com/400x300/?blackpearl");
+                    "https://source.unsplash.com/400x300/?mens");
 
             //mapping
             author1.addBook(book1);

@@ -46,6 +46,10 @@ body{
     font-family: 'Questrial',sans-serif;
     line-height: 1;
 }
+#footer a{
+    text-decoration: none!important;
+    color: white!important;
+}
 
 
 
