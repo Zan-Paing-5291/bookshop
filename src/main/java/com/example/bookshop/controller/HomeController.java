@@ -13,7 +13,7 @@ public class HomeController {
 
     @GetMapping({"/","home"})
     public String home(Model model){
-        model.addAttribute(bookService.listBooks());
+        model.addAttribute("books",bookService.listBooks());
         return "home";
     }
 }

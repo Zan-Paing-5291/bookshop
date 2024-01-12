@@ -1,141 +1,104 @@
 <!DOCTYPE html>
-<html th:replace="layout/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+<html th:replace="layout/masterLayout :: layout(~{::main})"
+      xmlns:th="http://www.thymeleaf.org">
 
 <body>
 <main role="main">
     <div class="container-fluid bg-light">
         <div class="container p-5">
             <section class="mt-4">
-                <h3 class="text-center p-5"><i>Best Sellers</i></h3>
+                <h3 class="text-center p-5"><i>BestSellers</i></h3>
                 <div class="row">
-                    <div class="col-md-6">
+
+                    <div class="col">
                         <div class="card shadow">
-                            <img th:src="${bookList.get(0).imgUrl}" alt="" class="card-img-top">
+                            <img th:src="${books.get(3).imgUrl}" class="card-img-top" alt="">
                             <div class="card-body text-center">
-                                <h5 class="card-title" th:text="${bookList.get(0).title}"></h5>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, veniam!</p>
-
-                                    <button class="btn btn-lg btn-outline-primary rounded-3 px-3">SeeMore</button>
-
+                                <h5 class="card-title" th:text="${books.get(3).title}"></h5>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Excepturi, nobis.</p>
+                                <a th:href="@{/book/list-books}" class="btn btn-lg btn-outline-primary px-3 rounded">Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col">
                         <div class="card shadow">
-                            <img th:src="${bookList.get(3).imgUrl}" alt="" class="card-img-top">
+                            <img th:src="${books.get(5).imgUrl}" class="card-img-top" alt="">
                             <div class="card-body text-center">
-                                <h5 class="card-title" th:text="${bookList.get(3).title}"></h5>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, veniam!</p>
-
-                                    <button class="btn btn-lg btn-outline-primary rounded-3 px-3">SeeMore</button>
-
+                                <h5 class="card-title" th:text="${books.get(5).title}"></h5>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Excepturi, nobis.</p>
+                                <a th:href="@{/book/list-books}" class="btn btn-lg btn-outline-primary px-3 rounded">Details</a>
                             </div>
                         </div>
                     </div>
-<!--                    <div class="col-md-4">-->
-<!--                        <div class="card shadow" style="width: 18rem; height: 30rem">-->
-<!--                            <img th:src="${bookList.get(5).imgUrl}" alt="" class="card-img-top">-->
-<!--                            <div class="card-body">-->
-<!--                                <h5 class="card-title" th:text="${bookList.get(5).title}"></h5>-->
-<!--                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, veniam!</p>-->
-<!--                                <div class="d-flex justify-content-between">-->
-<!--                                    <span class="lead text-muted" th:text="${'$'+bookList.get(5).price}"></span>-->
-<!--                                    <button class="btn btn-sm btn-primary">Details</button>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+
                 </div>
             </section>
-        </div>
-    </div>
 
-    <section id="quotes">
-        <div class="container text-center mt-3 p-5">
-            <h3 class="my-5">What Our Readers Are Saying</h3>
-            <div class="row">
-                <div class="col-md-4">
-                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-                    <blockquote class="blockquote">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quae!</p>
-                        <footer class="blockquote-footer">Zan Paing</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-                    <blockquote class="blockquote">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quae!</p>
-                        <footer class="blockquote-footer">Sayar Zan</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-                    <blockquote class="blockquote">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quae!</p>
-                        <footer class="blockquote-footer">Kwee Zan</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container mt-5 text-center">
-            <h1>What Others Are Saying!</h1>
-            <div class="row">
-                <div class="col-md-4" th:each="book : ${bookList}">
-                    <div class="card mb-3">
-                        <img th:src="${book.imgUrl}" alt="image" class="img-thumbnail">
+            <section id="quotes">
+                <div class="container text-center mt-4 p-5">
+                    <h3 class="my-4">WHAT OUR READERS ARE SAYING</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <blockquote class="blockquote">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Beatae labore maiores nobis officia
+                                    sunt! Repellendus?</p>
+                                <footer class="blockquote-footer">James Serlay</footer>
+                            </blockquote>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <blockquote class="blockquote">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae labore maiores nobis officia sunt! Repellendus?</p>
+                                <footer class="blockquote-footer">James Serlay</footer>
+                            </blockquote>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <blockquote class="blockquote">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae labore maiores nobis officia sunt! Repellendus?</p>
+                                <footer class="blockquote-footer">James Serlay</footer>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section>
-        <div class="container text-center mt-5">
-            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-            <blockquote class="blockquote">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolor doloremque fugiat hic iure maxime molestias, nam nemo quis quisquam quos sint soluta velit voluptatum.
-                <footer class="blockquote-footer mt-3">Michael Owen</footer>
-            </blockquote>
-        </div>
-    </section>
 
-    <section class="bg-dark text-white container-fluid">
-        <div class="container text-center p-5">
-            <h3>JOIN OUR NEWS BUYERS FOR DEALS AND UPDATE AND OFFERS</h3>
-            <div class="row justify-content-center">
-                <div class="col-10 col-md-6 col-sm-8 col-lg-4">
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control">
-                            <button class="btn btn-success input-group-text">Search</button>
+            <section>
+                <div class="container text-center mt-4">
+                    <h1>WHAT OTHERS ARE SAYING</h1>
+
+                    <div class="row">
+                        <div class="col-md-4" th:each="book : ${books}">
+                            <div class="card mb-3">
+                                <img th:src="${book.imgUrl}" class="img-thumbnail" alt="">
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <div class="container text-center mt-4">
+                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                    <blockquote class="blockquote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolor esse eveniet explicabo illum ipsam natus nobis provident voluptates? Alias, aspernatur atque
+                        consequatur eos eveniet illo non repudiandae sit vitae?
+                        <footer class="blockquote-footer mt-3">Richard Chan</footer>
+                    </blockquote>
+                </div>
+            </section>
+
+
+
+
         </div>
-    </section>
-    <section class="bg-secondary text-white p-4" id="footer">
-        <ul class="nav text-center justify-content-center flex-column flex-sm-row">
-            <li class="nav-item">
-                <a href="#" class="nav-link">FAQ</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">EXPERIENCE</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">CONTACT</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">EXPLORE</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">BOOKNOW</a>
-            </li>
-        </ul>
-    </section>
+
+
+    </div>
 
 </main>
 </body>
